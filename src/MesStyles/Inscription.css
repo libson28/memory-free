@@ -1,0 +1,57 @@
+* {
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Formulaire-container{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    margin: 8rem auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 5px;
+    width: 85%;
+    height: auto;
+
+
+}
+.Formulaire-container img{
+   width: 100%;
+}
+form h1{
+  color: #5379F6;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+
+}
+.lnc{
+    width: 100%;
+    height: 35px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.bbb{
+    height: 33rem;
+}
+
+button{
+    padding: 7px 15px;
+    color: #ffffff;
+    background-color: #5379F6;
+    border: none;
+    margin-top: 0.8em;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    font-weight: bold;
+}
+button:hover{
+  background-color: #a2b8ff;
+}
+
+input{
+    border: 1px solid #9f9f9f;
+    margin-top: 5px;
+}
+
