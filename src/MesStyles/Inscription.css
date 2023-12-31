@@ -37,14 +37,16 @@ form h1{
     height: 33rem;
 }
 
-button{
+.btn{
     padding: 7px 15px;
     color: #ffffff;
     background-color: #5379F6;
     border: none;
     margin-top: 0.8em;
+    width: 100%;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
     font-weight: bold;
+  
 }
 button:hover{
   background-color: #a2b8ff;
@@ -55,3 +57,17 @@ input{
     margin-top: 5px;
 }
 
+.logIn{
+    text-align: center;
+    padding-top: 1rem;
+    
+ 
+}
+.logIn i{
+   font-size: 1rem;
+color: #5379F6;
+}
+
+a{
+    text-decoration: none;
+}

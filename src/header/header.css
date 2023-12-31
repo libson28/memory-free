@@ -1,5 +1,5 @@
 
-ul{
+.liste ul{
     display: flex;
     gap: 2rem;
     list-style: none;
@@ -10,6 +10,9 @@ ul{
     font-weight: 500;
 }
 
+button{
+    border: none;
+}
 
 .logo img{
     width: 12%;
@@ -24,3 +27,16 @@ ul{
     height: 5rem;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
+
+span{
+    margin-top: -1.5rem;
+}
+span .fa-user{
+   font-size: 1.1em;
+}
+.fa-circle{
+   font-size: 0.8em;
+   padding-bottom: 10px;
+   color: rgb(8, 245, 16);
+}
+

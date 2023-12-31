@@ -1,49 +1,79 @@
 import React from 'react';
 import '../MesStyles/Accueil.css'
+import Header from '../header/Header';
+
+
 
 
 const Home =({TabMemoires}) => {
     return (
         <>
-             <div className='logo'>
-            <img src='./logo.png' alt='hh' />
-            <div className='liste'>
-                <ul>
-                    <li><a href='#'>Accueil</a></li>
-                    <li><a href='#'>A propos</a></li>
-                    <li><a href='#'>Publications</a></li>
-                   
-                </ul>
-            </div>
-
-             <div className='log'>
-               <button><a href='#'>Se connecter</a> <i class="fa-solid fa-user"></i></button>
-            </div>
-        </div>
-            
+            <Header />            
             <div className='mesBlocs'>
                 <div className='bloc1'>
-                    <h3 className='titre'>Extraits de publications</h3>
+                    <h4 className='titre'>Récemment publiés</h4>
                     <hr></hr>
-                    {/*  */}
-                   
+                     <div className='temoin' id='temoin'>
+                        <div className='profile'>
+                            <img src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
+                        </div>
+                        <div className='texte'>
+                            <h5>
+                                Agriculture
+                            </h5>
+                        </div> 
+                    </div>
+                    <hr />
+                     <div className='temoin' id='temoin'>
+                        <div className='profile'>
+                            <img src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
+                        </div>
+                        <div className='texte'>
+                            <h5>
+                                Agriculture
+                            </h5>
+                        </div> 
+                    </div>
+                    <hr />
+                     <div className='temoin' id='temoin'>
+                        <div className='profile'>
+                            <img src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
+                        </div>
+                        <div className='texte'>
+                            <h5>
+                                Agriculture
+                            </h5>
+                        </div> 
+                    </div>
+                    <hr />
+                     <div className='temoin' id='temoin'>
+                        <div className='profile'>
+                            <img src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
+                        </div>
+                        <div className='texte'>
+                            <h5>
+                                Agriculture
+                            </h5>
+                        </div> 
+                    </div>
+                    <hr />
+                     <div className='temoin' id='temoin'>
+                        <div className='profile'>
+                            <img src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
+                        </div>
+                        <div className='texte'>
+                            <h5>
+                                Agriculture
+                            </h5>
+                        </div> 
+                    </div>
+                    <hr />
                         <div className='articles'>
-                                {TabMemoires.map((carte, index) => (
-
-                            <div className='carte' key={index}> 
-                                <div>
-                                    <img src= {carte.image} />
-                                </div>    
-                                {/*  */}
-                                <div className='description'>
-                                    <h3>{carte.title}</h3>
-                                    <p>{carte.text}</p>
-                                </div>
-                            </div>
+                           
                         </div>
                     
-                ))}
-                    {/*  */}
+              
+                 
 
                    
                 </div>
@@ -57,7 +87,45 @@ const Home =({TabMemoires}) => {
                 {/* 2ND BLOC */}
 
                 <div className='bloc3'>
-                    hhhhh
+                     <h4 className='titre'>Témoignagnes</h4>
+                    <hr></hr>
+                    
+                    <div className='temoin'>
+                        <div className='profil'>
+                            <img src='https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?w=740'/> Une plateforme vrament à saluer, rien à dire. 
+                        </div>
+                        <hr />
+                        
+                    </div>
+                    <div className='temoin'>
+                        <div className='profil'>
+                            <img src='https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?w=740'/> Une plateforme vrament à saluer, rien à dire. 
+                        </div>
+                        <hr />
+                        
+                    </div>
+                    <div className='temoin'>
+                        <div className='profil'>
+                            <img src='https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?w=740'/> Une plateforme vrament à saluer, rien à dire. 
+                        </div>
+                        <hr />
+                        
+                    </div>
+                    <div className='temoin'>
+                        <div className='profil'>
+                            <img src='https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?w=740'/> Une plateforme vrament à saluer, rien à dire. 
+                        </div>
+                        <hr />
+                        
+                    </div>
+                    <div className='temoin'>
+                        <div className='profil'>
+                            <img src='https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?w=740'/> Une plateforme vrament à saluer, rien à dire. 
+                        </div>
+                        <hr />
+                        
+                    </div>
+                    
                 </div>
             </div>
 {/* END THIRD BLOC */}

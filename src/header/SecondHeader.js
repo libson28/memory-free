@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
-import { FaUserCircle } from 'react-icons/fa';
+import React from 'react';
 import './header.css'
 
 
-function MonHeader() {
-   
- 
+function SecondMenu() {
     return (
         <div className='logo'>
         
@@ -13,7 +10,7 @@ function MonHeader() {
             
             <div className='liste'>
                 <ul>
-                    <li><a href='/Home'>Accueil</a></li>
+                   <li><a href='/'>Accueil</a></li>
                     <li><a href='/About'>A propos</a></li>
                     <li><a href='/Memory'>Mémoires</a></li>
                    
@@ -21,11 +18,11 @@ function MonHeader() {
             </div>
 
              <div className='log'>
-               <button  ><a href='/Connexion'>Se connecter</a></button>
+               <span><i class="fa-solid fa-user"></i><sup><i class="fa-solid fa-circle"></i></sup></span>
             </div>
         </div>
     )
 }
       
-export default MonHeader     
+export default SecondMenu     
       

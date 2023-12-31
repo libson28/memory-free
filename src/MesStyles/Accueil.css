@@ -1,23 +1,24 @@
-button {
+.log button {
     text-decoration: none;
     color: #ffffff;
     font-size: 0.9em;
     font-weight: 500;
     background-color: #435ef6;
-    padding: 7px 12px;
+    padding: 0 12px;
     border-radius: 10px;
-    margin-top: -1.3rem;
+    margin-top: -2rem;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 i{
     font-size: 0.7rem;
 }
-i:hover{
+
+.fa-user:hover{
     background-color: black;
 }
 
-button:hover{
+.log button:hover{
     background-color: #e6e6ea;
     color: #000000;
 }
@@ -26,12 +27,12 @@ button:hover{
     display: flex;
     justify-content: flex-end;
     padding-right: 30px;
+    margin-top: -0.5rem;
 }
 
 .mesBlocs{
     display: grid;
     grid-template-columns: 20% 40% 20%;
-    /* place-items: center; */
     justify-content: center;
     margin-top: 3rem;
     gap: 1.5rem;
@@ -44,7 +45,8 @@ button:hover{
 }
 
 .bloc1,
-.bloc2{
+.bloc2, 
+.bloc3{
     height: 35rem;
 }
 
@@ -67,11 +69,11 @@ button a:hover{
    color: #000000;
 }
 
-li a {
+.liste ul li a {
     text-decoration: none;
     color: #000000;
 }
-li a:hover {
+.liste ul li a:hover {
     color: #435ef6;
 }
 
@@ -104,4 +106,28 @@ li a:hover {
     overflow: hidden;
     background-color: #ffffff;
     /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+}
+
+.profil img{
+    width: 14%;
+    border-radius: 50%;
+}
+.profile img{
+    width: 100%;
+}
+
+.temoin{
+    padding: 0 10px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+#temoin{
+    position: relative;
+    display: flex;
+}
+
+.texte{
+    margin-right: 5rem;
+    padding-left: 10px;
 }
