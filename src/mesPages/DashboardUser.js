@@ -1,10 +1,12 @@
 import React from "react";
-import SecondMenu from '../header/SecondHeader';
-import Memory from "./Memoires";
+// import SecondMenu from '../header/SecondHeader';
+// import Memory from "./Memoires";
 import '../MesStyles/dashboardUser.css'
+import { Link } from "react-router-dom";
 
 
 function User() {
+
   return (
     <>
       <div className="sidebar">
@@ -15,19 +17,19 @@ function User() {
         <div className="options">
           <ul>
             <li>
-              <a href="">
+              <Link to ="">
                 <i class="fa-solid fa-left-long"></i> Accueil
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link to ="">
                 <i class="fa-solid fa-list"></i> Lister
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link to ="">
                 <i class="fa-solid fa-book-bookmark"></i>Archives
-              </a>
+              </Link>
             </li>
            
           </ul>
@@ -36,7 +38,7 @@ function User() {
         <div className="disconnect">
           <ul>
             <li>
-              <a>Deconnection</a>
+              <Link>Deconnection</Link>
             </li>
           </ul>
         </div>

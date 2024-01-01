@@ -1,6 +1,8 @@
 import React from 'react';
 import '../MesStyles/Accueil.css'
 import Header from '../header/Header';
+import { Image } from 'react-bootstrap';
+import Popup from './AjoutMemoire';
 
 
 
@@ -8,14 +10,15 @@ import Header from '../header/Header';
 const Home =({TabMemoires}) => {
     return (
         <>
-            <Header />            
+            <Header />   
+            <Popup></Popup>        
             <div className='mesBlocs'>
                 <div className='bloc1'>
                     <h4 className='titre'>Récemment publiés</h4>
                     <hr></hr>
                      <div className='temoin' id='temoin'>
                         <div className='profile'>
-                            <img src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
+                            <Image src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
                         </div>
                         <div className='texte'>
                             <h5>
@@ -26,7 +29,7 @@ const Home =({TabMemoires}) => {
                     <hr />
                      <div className='temoin' id='temoin'>
                         <div className='profile'>
-                            <img src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
+                            <Image src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
                         </div>
                         <div className='texte'>
                             <h5>
@@ -37,7 +40,7 @@ const Home =({TabMemoires}) => {
                     <hr />
                      <div className='temoin' id='temoin'>
                         <div className='profile'>
-                            <img src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
+                            <Image src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
                         </div>
                         <div className='texte'>
                             <h5>
@@ -48,7 +51,7 @@ const Home =({TabMemoires}) => {
                     <hr />
                      <div className='temoin' id='temoin'>
                         <div className='profile'>
-                            <img src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
+                            <Image src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
                         </div>
                         <div className='texte'>
                             <h5>
@@ -59,7 +62,7 @@ const Home =({TabMemoires}) => {
                     <hr />
                      <div className='temoin' id='temoin'>
                         <div className='profile'>
-                            <img src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
+                            <Image src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
                         </div>
                         <div className='texte'>
                             <h5>
@@ -92,35 +95,35 @@ const Home =({TabMemoires}) => {
                     
                     <div className='temoin'>
                         <div className='profil'>
-                            <img src='https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?w=740'/> Une plateforme vrament à saluer, rien à dire. 
+                            <Image src='https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?w=740'/> Une plateforme vrament à saluer, rien à dire. 
                         </div>
                         <hr />
                         
                     </div>
                     <div className='temoin'>
                         <div className='profil'>
-                            <img src='https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?w=740'/> Une plateforme vrament à saluer, rien à dire. 
+                            <Image src='https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?w=740'/> Une plateforme vrament à saluer, rien à dire. 
                         </div>
                         <hr />
                         
                     </div>
                     <div className='temoin'>
                         <div className='profil'>
-                            <img src='https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?w=740'/> Une plateforme vrament à saluer, rien à dire. 
+                            <Image src='https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?w=740'/> Une plateforme vrament à saluer, rien à dire. 
                         </div>
                         <hr />
                         
                     </div>
                     <div className='temoin'>
                         <div className='profil'>
-                            <img src='https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?w=740'/> Une plateforme vrament à saluer, rien à dire. 
+                            <Image src='https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?w=740'/> Une plateforme vrament à saluer, rien à dire. 
                         </div>
                         <hr />
                         
                     </div>
                     <div className='temoin'>
                         <div className='profil'>
-                            <img src='https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?w=740'/> Une plateforme vrament à saluer, rien à dire. 
+                            <Image src='https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?w=740'/> Une plateforme vrament à saluer, rien à dire. 
                         </div>
                         <hr />
                         
