@@ -35,13 +35,21 @@ const FirebaseConfig = {
   appId: "1:798538206811:web:45ac1f311a6a399b08397e"
 };
 
-// Initialisation de l'application
-const app = initializeApp(FirebaseConfig);
 
-// Obtention des instances des services nécessaires
-// const auth = getAuth(app);
+const app = initializeApp(FirebaseConfig);
+const auth = getAuth(app);
 const firestore = getFirestore(app);
 const storage = getStorage(app);
-export const auth = getAuth(app);
 
-export {  firestore, storage };
+export { auth, firestore, storage };
+
+
+// Initialisation de l'application
+// const app = initializeApp(FirebaseConfig);
+// // const auth = getAuth(app);
+// const firestore = getFirestore(app);
+// const storage = getStorage(app);
+// export const auth = getAuth(app);
+
+// export {  firestore, storage };
+

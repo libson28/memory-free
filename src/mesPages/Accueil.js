@@ -2,7 +2,7 @@ import React from 'react';
 import '../MesStyles/Accueil.css'
 import Header from '../header/Header';
 import { Image } from 'react-bootstrap';
-import Popup from './AjoutMemoire';
+// import Popup from './AjoutMemoire';
 
 
 
@@ -11,7 +11,6 @@ const Home =({TabMemoires}) => {
     return (
         <>
             <Header />   
-            <Popup></Popup>        
             <div className='mesBlocs'>
                 <div className='bloc1'>
                     <h4 className='titre'>Récemment publiés</h4>

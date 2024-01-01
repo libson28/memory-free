@@ -1,15 +1,16 @@
 import React, {useState, useEffect} from 'react';
 // import { FaUserCircle } from 'react-icons/fa';
 import './header.css'
+// import { NavLink } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 function MonHeader() {
-    const [utilisateurConnecte, setUtilisateurConnecte] = useState(false);
+    const [utilisateurConnecte, setUtilisateurConnecte] = useState(true);
 
 const handleConnexion = () => {
       // Mettre à jour l'état pour indiquer que l'utilisateur est connecté
   setUtilisateurConnecte(true);
-  // alert('se déconnecter');
   alert('Utilisateur connecté');
 
 };
@@ -21,7 +22,6 @@ useEffect(() => {
 const handleDeconnexion = () => {
       // Mettre à jour l'état pour indiquer que l'utilisateur est déconnecté
   setUtilisateurConnecte(false); 
-  // alert('se connecter');
   alert('Utilisateur déconnecté');
 };
    
@@ -33,7 +33,7 @@ const handleDeconnexion = () => {
             
             <div className='liste'>
                 <ul>
-                    <li><a href='/Home'>Accueil</a></li>
+                    <li><a href='/'>Accueil</a></li>
                     <li><a href='/About'>A propos</a></li>
                     <li><a href='/Memory'>Mémoires</a></li>
                    
@@ -41,17 +41,13 @@ const handleDeconnexion = () => {
             </div>
 
              <div className='log'>
-               {/* <button  ><a href='/Connexion'>Se connecter</a></button> */}
-               {utilisateurConnecte ? (
-                <button href="/" className="headerconnect" onClick={handleConnexion}>
-                Se déconnecter
-                </button>
-                ) : (
-                <button href="/Connexion" className="headerconnect" onClick={handleDeconnexion}>
-                Se connecter
-                </button>
-            )}
+               {!utilisateurConnecte ? 
+                <button className="headerconnect" onClick={handleConnexion}> <Link to="/">Se déconnecter</Link> </button> 
+                : 
+                <button  className="headerconnect" onClick={handleDeconnexion} > <Link to="/Connexion">Se connecter</Link></button>
+               }
             </div>
+                    {/* <NavLink className="headerconnect" href="/Connexion">Se connecter</NavLink> */}
         </div>
     )
 }
