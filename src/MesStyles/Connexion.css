@@ -133,7 +133,13 @@ th {
     }
 }
 
-.btnnnn{
-    width: 14%;
-    margin-left: 6rem;
+.btnAjout{
+    width: 20% !important;
+    margin-left: 20rem;
+    margin-top: -70rem!important;
+}
+.tab{
+    width: 75%;
+    margin-left: 18rem;
+    margin-top: -32rem !important;
 }

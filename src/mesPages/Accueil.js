@@ -1,13 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../MesStyles/Accueil.css'
 import Header from '../header/Header';
 import { Image } from 'react-bootstrap';
 // import Popup from './AjoutMemoire';
+import { collection, getDocs } from 'firebase/firestore';
+import { firestore } from '../FirebaseConfig';
 
 
 
 
-const Home =({TabMemoires}) => {
+
+const Home = ({ TabMemoires }) => {
+    
+  const [memoires, setMemoires] = useState([]);
+  const values = collection (firestore, "memoire" )
+
+
+  useEffect(() =>{
+    const getData =  async() =>{
+      const dbMemoires = await getDocs(values)
+      setMemoires (dbMemoires.docs.map(doc=>({...doc.data(),id:doc.id})))
+      
+    }
+    getData()
+  })
     return (
         <>
             <Header />   
@@ -15,61 +31,84 @@ const Home =({TabMemoires}) => {
                 <div className='bloc1'>
                     <h4 className='titre'>Récemment publiés</h4>
                     <hr></hr>
-                     <div className='temoin' id='temoin'>
+                    {/* {memoires.map((memoire) => (
+                        <div className='temoin' id='temoin'>
+                            <div className='profile'>
+                                <Image src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
+                            </div>
+                            <div className='texte'>
+                                <h5>
+                                    {memoire.name1}
+                                </h5>
+                            </div>
+                        </div>
+                        
+                    ))} */}
+                    <div className='temoin' id='temoin'>
                         <div className='profile'>
-                            <Image src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
+                            <Image src='https://img.freepik.com/free-vector/low-code-development-concept-illustration_114360-7294.jpg?size=626&ext=jpg&ga=GA1.2.1650161440.1694444933&semt=ais' />
                         </div>
                         <div className='texte'>
                             <h5>
-                                Agriculture
+                                web design
                             </h5>
-                        </div> 
+                        </div>
                     </div>
                     <hr />
-                     <div className='temoin' id='temoin'>
+                    <div className='temoin' id='temoin'>
                         <div className='profile'>
-                            <Image src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
+                            <Image src='https://img.freepik.com/free-photo/ai-chip-artificial-intelligence-future-technology-innovation_53876-129780.jpg?size=626&ext=jpg&ga=GA1.2.1650161440.1694444933&semt=ais' />
                         </div>
                         <div className='texte'>
                             <h5>
-                                Agriculture
+                                Intelligence Artificielle
                             </h5>
-                        </div> 
+                        </div>
                     </div>
                     <hr />
-                     <div className='temoin' id='temoin'>
+                    <div className='temoin' id='temoin'>
                         <div className='profile'>
-                            <Image src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
+                            <Image src='https://img.freepik.com/free-photo/digital-tablet-screen-with-smart-home-controller-wooden-table_53876-96317.jpg?size=626&ext=jpg&ga=GA1.2.1650161440.1694444933&semt=ais' />
                         </div>
                         <div className='texte'>
                             <h5>
-                                Agriculture
+                                Domotique
                             </h5>
-                        </div> 
+                        </div>
                     </div>
                     <hr />
-                     <div className='temoin' id='temoin'>
+                    <div className='temoin' id='temoin'>
                         <div className='profile'>
-                            <Image src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
+                            <Image src='https://img.freepik.com/free-photo/smart-agriculture-iot-with-hand-planting-tree-background_53876-124626.jpg?size=626&ext=jpg&ga=GA1.2.1650161440.1694444933&semt=sph' />
                         </div>
                         <div className='texte'>
                             <h5>
-                                Agriculture
+                               Agriculture
                             </h5>
-                        </div> 
+                        </div>
                     </div>
                     <hr />
-                     <div className='temoin' id='temoin'>
+                    <div className='temoin' id='temoin'>
                         <div className='profile'>
-                            <Image src='https://img.freepik.com/premium-photo/hand-use-mobile-phone-circle-network-communication-technology-globaldata_28974-432.jpg?size=626&ext=jpg&uid=R121268218&ga=GA1.2.513108714.1692835132&semt=sph' />
+                            <Image src='https://img.freepik.com/free-photo/3d-internet-secuirty-badge_1048-18106.jpg?w=740&t=st=1704156921~exp=1704157521~hmac=f4eab156cff064221d212690bcba2bcd8a1c5a29dcb1f5efb334faf967b72adb' />
                         </div>
                         <div className='texte'>
                             <h5>
-                                Agriculture
+                                Cybersecurity
                             </h5>
-                        </div> 
+                        </div>
                     </div>
                     <hr />
+                    <div className='temoin' id='temoin'>
+                        <div className='profile'>
+                            <Image src='https://img.freepik.com/free-photo/network-switch-with-cables_1137-6.jpg?size=626&ext=jpg&ga=GA1.2.1650161440.1694444933&semt=ais' />
+                        </div>
+                        <div className='texte'>
+                            <h5>
+                                Réseau Informatique
+                            </h5>
+                        </div>
+                    </div>
                         <div className='articles'>
                            
                         </div>
