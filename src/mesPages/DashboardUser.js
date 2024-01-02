@@ -17,12 +17,12 @@ function User() {
         <div className="options">
           <ul>
             <li>
-              <Link to ="">
+              <Link to="/HomeUser">
                 <i class="fa-solid fa-left-long"></i> Accueil
               </Link>
             </li>
             <li>
-              <Link to ="">
+              <Link to="/Popup">
                 <i class="fa-solid fa-list"></i> Lister
               </Link>
             </li>

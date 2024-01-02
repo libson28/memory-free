@@ -4,6 +4,7 @@ import '../MesStyles/Connexion.css';
 import { storage, firestore } from '../FirebaseConfig';
 import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from 'firebase/firestore';
 import { useEffect } from 'react';
+import  User from '../mesPages/DashboardUser';
 
 
 const Popup = () => {
@@ -33,8 +34,8 @@ const Popup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await addDoc(values,{name1:title,name2:description})
-
+    await addDoc(values, { name1: title, name2: description })
+  
     console.log("Title:", title);
     console.log("Description:", description);
     console.log("Fichier:", fichier);
@@ -85,19 +86,26 @@ const Popup = () => {
   // methode pour exécuter plusieurs fonctions
   const handleButtonClick = (id, name1, name2) => {
     handleRecup(id, name1, name2);
-    handleOpenModal();
+    handleOpenModale();
   };
   
 
-
+  //  modal pour ajouter
   const [showModal, setShowModal] = useState(false);
 
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
 
+  // modal pour modifier
+  const [showModale, setShowModale] = useState(false);
+
+  const handleOpenModale = () => setShowModale(true);
+  const handleCloseModale = () => setShowModale(false);
+
   return (
     <>
-      <Button className="btnnnn" variant="primary" onClick={handleOpenModal}>
+      <User/>
+      <Button className="btnAjout" variant="primary" onClick={handleOpenModal}>
         Ajouter un mémoire
       </Button>
         {/* modal pour ajouter */}
@@ -143,7 +151,7 @@ const Popup = () => {
       </Modal>
 
       {/* modal pour modifier */}
-      <Modal className="form" show={showModal} onHide={handleCloseModal}>
+      <Modal className="form" show={showModale} onHide={handleCloseModale}>
       <Modal.Header closeButton>
         <Modal.Title>
           <h3 className="leTitre">Modifier un mémoire</h3>
@@ -151,7 +159,7 @@ const Popup = () => {
       </Modal.Header>
 
       <Modal.Body>
-        <form onSubmit={handleModifier} encType="multipart/form-data">
+        <form onSubmit={handleModifier} >
           <div className="mb-3">
             <label htmlFor="fullname" className="form-label">
               Titre
@@ -177,14 +185,14 @@ const Popup = () => {
           <Button type="submit" className="btn" id="submit">
             Modifier
           </Button>
-          <Button className="monBouton2" onClick={handleCloseModal}>
+          <Button className="monBouton2" onClick={handleCloseModale}>
             Annuler
           </Button>
         </form>
       </Modal.Body>
       </Modal>
 
-      <div className="container mt-4">
+      <div className="container  tab mt-4">
         <div className="table-responsive">
           <table className="table p-4">
             <thead>
